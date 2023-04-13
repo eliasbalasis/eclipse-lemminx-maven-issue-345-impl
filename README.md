@@ -1,1 +1,1 @@
-# eclipse-lemminx-maven-issue-345-main
+# eclipse-lemminx-maven-issue-345-impl
