@@ -6,27 +6,26 @@
 
 	<parent>
 		<groupId>mygroup</groupId>
-		<artifactId>eclipse-lemminx-maven-issue-345.project.main</artifactId>
+		<artifactId>eclipse-lemminx-maven-issue-345.impl</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>eclipse-lemminx-maven-issue-345.impl</artifactId>
+	<artifactId>eclipse-lemminx-maven-issue-345.impl.app</artifactId>
 
 	<packaging>pom</packaging>
 
-	<properties>
-		<maven.deploy.skip>true</maven.deploy.skip>
-	</properties>
-
 	<modules>
-		<module>modules/app</module>
+		<module>../app-core</module>
+		<module>../app-shared</module>
+		<module>../app-root</module>
 	</modules>
 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>mygroup</groupId>
-				<artifactId>eclipse-lemminx-maven-issue-345.impl.app.shared</artifactId>
+				<artifactId>eclipse-lemminx-maven-issue-345.impl.app.core</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 		</dependencies>
