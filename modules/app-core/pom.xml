@@ -15,6 +15,10 @@
 
 	<packaging>jar</packaging>
 
+	<properties>
+		<properties.private.ApplicationPropertiesResolver.property1>${net.upperlimit.root.property1}</properties.private.ApplicationPropertiesResolver.property1>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>mygroup</groupId>
@@ -24,6 +28,19 @@
 			<groupId>mygroup</groupId>
 			<artifactId>eclipse-lemminx-maven-issue-345.tools.retry.springframework.impl.dummy</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
 	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
 
 </project>
